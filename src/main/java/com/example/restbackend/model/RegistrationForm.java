@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
+import java.util.Date;
+
 
 @Entity
 public class RegistrationForm {
@@ -15,7 +17,29 @@ public class RegistrationForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Long Id;
+    private Long id;
+
+    private String surName;
+
+    private String firstName;
+
+    private String title;
+
+    private Date DOB;
+
+    private String gender;
+
+    private String address;
+
+    private int street_Number;
+
+    private String street_Name;
+
+    private String city;
+
+    private String county;
+
+    private String EIR_Code;
 
     private String Email;
 
@@ -40,8 +64,19 @@ public class RegistrationForm {
     private LocalDate Insurance_Policy_Expiry;
 
 
-    public RegistrationForm(Long id, String email, int mobile_Number, int emergency_Contact_Number, int medical_Card_Number, LocalDate expiry_Date, int PPSN_Number, String insurance_Company_Name, String insurance_Plan_Type, int insurance_Policy_Number, String insurance_Policy_Holder_Name, LocalDate insurance_Policy_Expiry) {
-        this.Id = id;
+    public RegistrationForm(Long id, String surName, String firstName, String title, Date DOB, String gender, String address, int street_Number, String street_Name, String city, String county, String EIR_Code, String email, int mobile_Number, int emergency_Contact_Number, int medical_Card_Number, LocalDate expiry_Date, int PPSN_Number, String insurance_Company_Name, String insurance_Plan_Type, int insurance_Policy_Number, String insurance_Policy_Holder_Name, LocalDate insurance_Policy_Expiry) {
+        this.id = id;
+        this.surName = surName;
+        this.firstName = firstName;
+        this.title = title;
+        this.DOB = DOB;
+        this.gender = gender;
+        this.address = address;
+        this.street_Number = street_Number;
+        this.street_Name = street_Name;
+        this.city = city;
+        this.county = county;
+        this.EIR_Code = EIR_Code;
         this.Email = email;
         this.Mobile_Number = mobile_Number;
         this.Emergency_Contact_Number = emergency_Contact_Number;
@@ -56,11 +91,99 @@ public class RegistrationForm {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getDOB() {
+        return DOB;
+    }
+
+    public void setDOB(Date DOB) {
+        this.DOB = DOB;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getStreet_Number() {
+        return street_Number;
+    }
+
+    public void setStreet_Number(int street_Number) {
+        this.street_Number = street_Number;
+    }
+
+    public String getStreet_Name() {
+        return street_Name;
+    }
+
+    public void setStreet_Name(String street_Name) {
+        this.street_Name = street_Name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public String getEIR_Code() {
+        return EIR_Code;
+    }
+
+    public void setEIR_Code(String EIR_Code) {
+        this.EIR_Code = EIR_Code;
     }
 
     public String getEmail() {
