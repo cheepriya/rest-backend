@@ -12,11 +12,11 @@ import java.util.List;
 public class ProjectController {
 
     @Autowired
-    private RegistrationFormRepository regFormRepository;
+    private RegistrationFormRepository registrationFormRepository;
 
     @GetMapping("/registration_page")
     public List<RegistrationForm> registrationDetails(){
-        return regFormRepository.findAll();
+        return registrationFormRepository.findAll();
     }
 
 }
