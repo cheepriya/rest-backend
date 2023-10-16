@@ -63,11 +63,12 @@ public class RegistrationForm {
 
     private LocalDate Insurance_Policy_Expiry;
 
+    private String past_Medical_Problems;
 
-    private String Preferred_Pharmacy;
+    private String current_Medications;
 
 
-    public RegistrationForm(Long id, String surName, String firstName, String title, Date DOB, String gender, String address, int street_Number, String street_Name, String city, String county, String EIR_Code, String email, int mobile_Number, int emergency_Contact_Number, int medical_Card_Number, LocalDate expiry_Date, int PPSN_Number, String insurance_Company_Name, String insurance_Plan_Type, int insurance_Policy_Number, String insurance_Policy_Holder_Name, LocalDate insurance_Policy_Expiry, String preferred_Pharmacy) {
+    public RegistrationForm(Long id, String surName, String firstName, String title, Date DOB, String gender, String address, int street_Number, String street_Name, String city, String county, String EIR_Code, String email, int mobile_Number, int emergency_Contact_Number, int medical_Card_Number, LocalDate expiry_Date, int PPSN_Number, String insurance_Company_Name, String insurance_Plan_Type, int insurance_Policy_Number, String insurance_Policy_Holder_Name, LocalDate insurance_Policy_Expiry, String past_Medical_Problems, String current_Medications) {
         this.id = id;
         this.surName = surName;
         this.firstName = firstName;
@@ -91,7 +92,8 @@ public class RegistrationForm {
         this.Insurance_Policy_Number = insurance_Policy_Number;
         this.Insurance_Policy_Holder_Name = insurance_Policy_Holder_Name;
         this.Insurance_Policy_Expiry = insurance_Policy_Expiry;
-        this.Preferred_Pharmacy = preferred_Pharmacy;
+        this.past_Medical_Problems = past_Medical_Problems;
+        this.current_Medications = current_Medications;
     }
 
     public Long getId() {
@@ -277,11 +279,20 @@ public class RegistrationForm {
     public void setInsurance_Policy_Expiry(LocalDate insurance_Policy_Expiry) {
         Insurance_Policy_Expiry = insurance_Policy_Expiry;
     }
-    public String getPreferred_Pharmacy() {
-        return Preferred_Pharmacy;
+
+    public String getPast_Medical_Problems() {
+        return past_Medical_Problems;
     }
 
-    public void setPreferred_Pharmacy(String preferred_Pharmacy) {
-        Preferred_Pharmacy = preferred_Pharmacy;
+    public void setPast_Medical_Problems(String past_Medical_Problems) {
+        this.past_Medical_Problems = past_Medical_Problems;
+    }
+
+    public String getCurrent_Medications() {
+        return current_Medications;
+    }
+
+    public void setCurrent_Medications(String current_Medications) {
+        this.current_Medications = current_Medications;
     }
 }
