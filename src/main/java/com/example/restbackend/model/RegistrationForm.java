@@ -7,7 +7,6 @@ import jakarta.persistence.Id;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.cglib.core.Local;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -16,7 +15,6 @@ public class RegistrationForm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
     private String fullName;
@@ -28,16 +26,21 @@ public class RegistrationForm {
 
     private String email;
 
-    private int mobile_Number;
+    private Integer mobile_Number;
 
 
-    private int medical_Card_Number;
+    private Integer medical_Card_Number;
 
-    private int PPSN_Number;
-    ;
+    private String PPSN_Number;
+
     private String previous_GP_Name_and_address;
 
-    public RegistrationForm(Long id, String fullName, Date DOB, String address, String EIR_Code, String email, int mobile_Number, int medical_Card_Number, int PPSN_Number, String previous_GP_Name_and_address) {
+
+    public RegistrationForm() {
+    }
+
+
+    public RegistrationForm(Long id, String fullName, Date DOB, String address, String EIR_Code, String email, Integer mobile_Number, Integer medical_Card_Number, String PPSN_Number, String previous_GP_Name_and_address) {
         this.id = id;
         this.fullName = fullName;
         this.DOB = DOB;
@@ -48,9 +51,7 @@ public class RegistrationForm {
         this.medical_Card_Number = medical_Card_Number;
         this.PPSN_Number = PPSN_Number;
         this.previous_GP_Name_and_address = previous_GP_Name_and_address;
-
     }
-
 
     public Long getId() {
         return id;
@@ -100,27 +101,27 @@ public class RegistrationForm {
         this.email = email;
     }
 
-    public int getMobile_Number() {
+    public Integer getMobile_Number() {
         return mobile_Number;
     }
 
-    public void setMobile_Number(int mobile_Number) {
+    public void setMobile_Number(Integer mobile_Number) {
         this.mobile_Number = mobile_Number;
     }
 
-    public int getMedical_Card_Number() {
+    public Integer getMedical_Card_Number() {
         return medical_Card_Number;
     }
 
-    public void setMedical_Card_Number(int medical_Card_Number) {
+    public void setMedical_Card_Number(Integer medical_Card_Number) {
         this.medical_Card_Number = medical_Card_Number;
     }
 
-    public int getPPSN_Number() {
+    public String getPPSN_Number() {
         return PPSN_Number;
     }
 
-    public void setPPSN_Number(int PPSN_Number) {
+    public void setPPSN_Number(String PPSN_Number) {
         this.PPSN_Number = PPSN_Number;
     }
 
