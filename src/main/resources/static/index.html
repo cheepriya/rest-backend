@@ -5,8 +5,7 @@
 </head>
 <body>
 <h1>Registration Form</h1>
-
-<form action="/registration_page/create" method="post">
+<form action="/registration/submit" method="post">
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="fullName" required><br><br>
 
@@ -23,7 +22,7 @@
     <input type="email" id="email" name="email" required><br><br>
 
     <label for="mobile_Number">Mobile Number:</label>
-    <input type="text" id="mobile_Number" name="mobile_Number" required><br><br>
+    <input type="tel" id="mobile_Number" name="mobile_Number" required><br><br>
 
     <label for="medical_Card_Number">Medical Card Number:</label>
     <input type="text" id="medical_Card_Number" name="medical_Card_Number" required><br><br>
@@ -32,9 +31,9 @@
     <input type="text" id="PPSN_Number" name="PPSN_Number" required><br><br>
 
     <label for="previous_GP_Name_and_address">Previous GP Name and Address:</label>
-    <textarea id="previous_GP_Name_and_address" name="previous_GP_Name_and_address" rows="4" required></textarea><br><br>
+    <input type="text" id="previous_GP_Name_and_address" name="previous_GP_Name_and_address" required><br><br>
 
-    <input type="submit" value="Submit">
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>

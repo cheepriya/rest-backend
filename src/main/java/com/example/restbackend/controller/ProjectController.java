@@ -24,20 +24,11 @@ public class ProjectController {
         return registrationFormRepository.findAll();
     }
 
-    @PostMapping("/registration_page/create")
-    public ResponseEntity<RegistrationForm> createRegForm(@RequestBody RegistrationForm registrationForm) {
-        // Validate the request, handle data, and save to the database
-        if (registrationForm == null) {
-            // Handle invalid request
-            return ResponseEntity.badRequest().body(null);
-        }
-
-        // You may want to add validation for the fields here
-
+    @PostMapping("/submit")
+    public RegistrationForm submitRegistrationForm(@RequestBody RegistrationForm registrationForm) {
+        // Save the submitted registration form to the database
         RegistrationForm savedForm = registrationFormRepository.save(registrationForm);
-
-        // Return the saved object along with a 201 Created status
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedForm);
+        return savedForm;
     }
-
 }
+
