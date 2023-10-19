@@ -4,7 +4,16 @@ text-align: center;
 
 body{
  background-color: #ADD8E6;
- margin: 0,auto,;
+ margin: 100 auto;
  text-align: center;
 }
+.container{
+ background-color:lavender
+
+}
+.registrationForm label{
+ display: inline-block;
+ width: 220px;
+}
+
 
