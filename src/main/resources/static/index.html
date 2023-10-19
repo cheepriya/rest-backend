@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <h1>Registration Form</h1>
 
-<form id="registrationForm" action="/registration_page/create" method="post">
+
+<form id="registrationForm" class="registrationForm" action="/registration_page/create" method="post">
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="fullName" required><br><br>
 
@@ -34,7 +36,7 @@
     <label for="previous_GP_Name_and_address">Previous GP Name and Address:</label>
     <textarea id="previous_GP_Name_and_address" name="previous_GP_Name_and_address" rows="4" required></textarea><br><br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" id="submit" value="Submit">
 </form>
 
 <script type="text/javascript">
@@ -44,15 +46,20 @@
         // Collect form data
         var formData = new FormData(this);
 
-        // Create headers with the appropriate content type
-        var headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        // Convert FormData to JSON format
+        var formObject = {};
+        formData.forEach((value, key) => {
+            formObject[key] = value;
+        });
+        var jsonData = JSON.stringify(formObject);
 
         // Send a POST request to the server to save the data
-        fetch('/registration_page/create', {
+        fetch('/submit', {
             method: 'POST',
-            body: formData,
-            headers: headers,  // Set the content type here
+            body: jsonData,
+            headers: {
+                    'Content-Type': 'application/json'
+            },
         })
         .then(response => {
             if (response.status === 201) {
