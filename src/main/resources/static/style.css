@@ -1,19 +1,11 @@
-h1{
-text-align: center;
- }
+.body {
+    background-color: antiquewhite;
+}
+.container.regFormContainer {
+    background-color: #fff;
+    padding: 50px 0 20px 50px;
+    margin-bottom: 50px;
+}
 
-body{
- background-color: #ADD8E6;
- margin: 100 auto;
- text-align: center;
-}
-.container{
- background-color:lavender
-
-}
-.registrationForm label{
- display: inline-block;
- width: 220px;
-}
 
 
