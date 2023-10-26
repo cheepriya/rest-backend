@@ -1,9 +1,6 @@
 package com.example.restbackend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.cglib.core.Local;
 
@@ -11,28 +8,29 @@ import java.util.Date;
 
 
 @Entity
+@Table(name="registration_page")
 public class RegistrationForm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name="fullName")
     private String fullName;
-    private Date DOB;
-
+    @Column(name="dob")
+    private Date dob;
+    @Column(name="address")
     private String address;
-
-    private String EIR_Code;
-
+    @Column(name="eir")
+    private String eir;
+    @Column(name="email")
     private String email;
-
+    @Column(name="mobile_Number")
     private Integer mobile_Number;
-
-
+    @Column(name="medical_Card_Number")
     private Integer medical_Card_Number;
-
-    private String PPSN_Number;
-
+    @Column(name="ppsn")
+    private String ppsn;
+    @Column(name="previous_GP_Name_and_address")
     private String previous_GP_Name_and_address;
 
 
@@ -40,16 +38,16 @@ public class RegistrationForm {
     }
 
 
-    public RegistrationForm(Long id, String fullName, Date DOB, String address, String EIR_Code, String email, Integer mobile_Number, Integer medical_Card_Number, String PPSN_Number, String previous_GP_Name_and_address) {
+    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, String previous_GP_Name_and_address) {
         this.id = id;
         this.fullName = fullName;
-        this.DOB = DOB;
+        this.dob = dob;
         this.address = address;
-        this.EIR_Code = EIR_Code;
+        this.eir = eir;
         this.email = email;
         this.mobile_Number = mobile_Number;
         this.medical_Card_Number = medical_Card_Number;
-        this.PPSN_Number = PPSN_Number;
+        this.ppsn = ppsn;
         this.previous_GP_Name_and_address = previous_GP_Name_and_address;
     }
 
@@ -69,12 +67,12 @@ public class RegistrationForm {
         this.fullName = fullName;
     }
 
-    public Date getDOB() {
-        return DOB;
+    public Date getdob() {
+        return dob;
     }
 
-    public void setDOB(Date DOB) {
-        this.DOB = DOB;
+    public void setdob(Date dob) {
+        this.dob = dob;
     }
 
     public String getAddress() {
@@ -85,12 +83,13 @@ public class RegistrationForm {
         this.address = address;
     }
 
-    public String getEIR_Code() {
-        return EIR_Code;
+    public String geteir() {
+        return eir;
     }
 
-    public void setEIR_Code(String EIR_Code) {
-        this.EIR_Code = EIR_Code;
+    public void seteir(String eir) {
+
+        this.eir = eir;
     }
 
     public String getEmail() {
@@ -117,12 +116,12 @@ public class RegistrationForm {
         this.medical_Card_Number = medical_Card_Number;
     }
 
-    public String getPPSN_Number() {
-        return PPSN_Number;
+    public String getppsn() {
+        return ppsn;
     }
 
-    public void setPPSN_Number(String PPSN_Number) {
-        this.PPSN_Number = PPSN_Number;
+    public void setppsn(String ppsn) {
+        this.ppsn = ppsn;
     }
 
     public String getPrevious_GP_Name_and_address() {
