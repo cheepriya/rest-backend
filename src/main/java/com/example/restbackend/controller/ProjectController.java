@@ -29,6 +29,7 @@ public class ProjectController {
     @PostMapping("/submit")
     public RegistrationForm submitRegistrationForm(@RequestBody RegistrationForm registrationForm) {
         // Save the submitted registration form to the database
+        System.out.println("json:" + registrationForm.toString());
         RegistrationForm savedForm = registrationFormRepository.save(registrationForm);
         return savedForm;
     }
