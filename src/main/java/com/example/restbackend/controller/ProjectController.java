@@ -19,6 +19,8 @@ public class ProjectController {
     @Autowired
     private RegistrationFormRepository registrationFormRepository;
 
+
+
     @GetMapping("/registration_page")
     public List<RegistrationForm> registrationDetails() {
         return registrationFormRepository.findAll();
