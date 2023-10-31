@@ -9,26 +9,22 @@
 <body class="body">
 <div class="container regFormContainer">
     <div class="row">
-        <div class="col-md-6">
-            <!-- Content on the Left -->
-            <img src="left-image.jpg" alt="Left Image">
-            <p>Your text here</p>
+        <div class="col-md-9">
+            <img src="images/queuewise.jpg" width="150" alt="Queuewise logo">
+            <p>Stay informed stay safe</p>
         </div>
-        <div class="text-right mt-3">
-            <!-- Login Button and Line -->
-            <div class="text-center">
-                <hr>
-            </div>
+        <div class="col-md-3">
             <button class="btn btn-primary mt-3">Login</button>
         </div>
-        <div class="col-md-6">
-            <!-- Content in the Center -->
-            <img src="center-image.jpg" alt="Center Image">
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+
             <p>Your text here</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <!--Registration Form         -->
-            <h1 class="text-center mb-5">Registration Form</h1>
+            <h2 class="text-center mb-5">Registration Form</h2>
             <form id="registrationForm" class="registrationForm" action="/registrationForm/create" method="post">
                 <div class="row mb-3">
                     <label for="fullName" class="form-label">Full Name:</label>
@@ -63,10 +59,6 @@
                     <input type="text" id="ppsn" name="ppsn" required class="form-control">
                 </div>
                 <div class="row mb-3">
-                    <label for="previous_GP_Name_and_address" class="form-label">Previous GP Name and Address:</label>
-                    <textarea id="previous_GP_Name_and_address" name="previous_GP_Name_and_address" rows="4" required class="form-control"></textarea>
-                </div>
-                <div class="row mb-3">
                     <label for="enableNotifications" class="form-label">Enable Notifications:</label>
                     <input type="checkbox" id="enableNotifications" name="enableNotifications" class="form-check-input">
                 </div>
@@ -80,22 +72,8 @@
     </div>
 </div>
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('background-image.jpg'); /* Replace with your background image path */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
         #registrationForm {
-            width: 50%;
+            width: 80%;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
@@ -103,30 +81,7 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        label, input, textarea {
-            display: block;
-            margin-bottom: 10px;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056B3;
-        }
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script type="text/javascript">
