@@ -20,10 +20,13 @@
     <div class="row">
         <div class="col-md-4">
 
-            <div><h5>Global Registration</h5></div>
-            <div><h5>Patient-Centred Scheduling</h5></div>
-            <div><h5>Instant Alert</h5></div>
-            <div><h5>Doctor Communication</h5></div>
+            <div><h6>Global Registration</h6></div>
+            <br>
+            <div><h6>Patient-Centred Scheduling</h6></div>
+            <br>
+            <div><h6>Instant Alert</h6></div>
+            <br>
+            <div><h6>Doctor Communication</h6></div>
         </div>
         <div class="col-md-8">
             <!--Registration Form         -->
@@ -108,9 +111,7 @@
             },
         })
         .then(response => {
-            console.log('Response status:', response.status); // Log the response status
             if (response.status === 200) {
-                console.log('Successful form submission. Redirecting...'); // Log a success message
                 // Successful submission, redirect to the success page
                 window.location.href = '/success.html';
             } else {
