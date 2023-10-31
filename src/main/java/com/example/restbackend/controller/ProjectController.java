@@ -3,14 +3,12 @@ package com.example.restbackend.controller;
 import com.example.restbackend.model.RegistrationForm;
 import com.example.restbackend.repository.RegistrationFormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.view.RedirectView;
 
-import java.sql.Ref;
 import java.util.List;
 
 @RestController
@@ -27,11 +25,16 @@ public class ProjectController {
     }
 
     @PostMapping("/submit")
-    public RegistrationForm submitRegistrationForm(@RequestBody RegistrationForm registrationForm) {
+    public RedirectView submitRegistrationForm(@RequestBody RegistrationForm registrationForm) {
         // Save the submitted registration form to the database
-        System.out.println("json:" + registrationForm.toString());
         RegistrationForm savedForm = registrationFormRepository.save(registrationForm);
-        return savedForm;
+//        return savedForm;
+        return new RedirectView("/success");
+    }
+
+    @GetMapping("/success")
+    public String successPage() {
+        return "success.html"; // This corresponds to the "success.html" page
     }
 }
 

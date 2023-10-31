@@ -108,7 +108,9 @@
             },
         })
         .then(response => {
-            if (response.status === 201) {
+            console.log('Response status:', response.status); // Log the response status
+            if (response.status === 200) {
+                console.log('Successful form submission. Redirecting...'); // Log a success message
                 // Successful submission, redirect to the success page
                 window.location.href = '/success.html';
             } else {
