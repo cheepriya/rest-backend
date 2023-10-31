@@ -1,8 +1,10 @@
 .body {
-    background-color: antiquewhite;
+    background-color: #f0f0f0;
+    background-image: url('background-image.jpg');
+    background-size: cover;
 }
 .container.regFormContainer {
-    background-color: #fff;
+    background-color: #E6E6FA;
     padding: 50px 0 20px 50px;
     margin-bottom: 50px;
 }
