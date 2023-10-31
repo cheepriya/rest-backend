@@ -20,7 +20,13 @@
     <div class="row">
         <div class="col-md-4">
 
-            <p>Your text here</p>
+            <div><h6>Global Registration</h6></div>
+            <br>
+            <div><h6>Patient-Centred Scheduling</h6></div>
+            <br>
+            <div><h6>Instant Alert</h6></div>
+            <br>
+            <div><h6>Doctor Communication</h6></div>
         </div>
         <div class="col-md-8">
             <!--Registration Form         -->
@@ -105,7 +111,7 @@
             },
         })
         .then(response => {
-            if (response.status === 201) {
+            if (response.status === 200) {
                 // Successful submission, redirect to the success page
                 window.location.href = '/success.html';
             } else {
