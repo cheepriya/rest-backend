@@ -30,8 +30,7 @@ public class RegistrationForm {
     private Integer medical_Card_Number;
     @Column(name="ppsn")
     private String ppsn;
-    @Column(name="previous_GP_Name_and_address")
-    private String previous_GP_Name_and_address;
+
     @Column(name="enableNotification")
     private String enableNotification;
 
@@ -40,7 +39,7 @@ public class RegistrationForm {
     }
 
 
-    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, String previous_GP_Name_and_address, String enableNotification) {
+    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, String enableNotification) {
         this.id = id;
         this.fullName = fullName;
         this.dob = dob;
@@ -50,7 +49,6 @@ public class RegistrationForm {
         this.mobile_Number = mobile_Number;
         this.medical_Card_Number = medical_Card_Number;
         this.ppsn = ppsn;
-        this.previous_GP_Name_and_address = previous_GP_Name_and_address;
         this.enableNotification = enableNotification;
     }
 
@@ -125,14 +123,6 @@ public class RegistrationForm {
 
     public void setppsn(String ppsn) {
         this.ppsn = ppsn;
-    }
-
-    public String getPrevious_GP_Name_and_address() {
-        return previous_GP_Name_and_address;
-    }
-
-    public void setPrevious_GP_Name_and_address(String previous_GP_Name_and_address) {
-        this.previous_GP_Name_and_address = previous_GP_Name_and_address;
     }
 
     public String getEnableNotification() {
