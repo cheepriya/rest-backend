@@ -8,13 +8,13 @@
 </head>
 <body class="body">
 <div class="container regFormContainer">
-    <div class="row">
+    <div id="header" class="row mb-5">
         <div class="col-md-9">
             <img src="images/queuewise.jpg" width="150" alt="Queuewise logo">
-            <p>Stay informed stay safe</p>
+            <p class="logo-text">Stay informed stay safe</p>
         </div>
-        <div class="col-md-3">
-            <button class="btn btn-primary mt-3">Login</button>
+        <div class="col-md-3 buttons">
+            <a href="dashboard.html" class="btn btn-primary mt-3">Login</a>
         </div>
     </div>
     <div class="row">
@@ -65,8 +65,10 @@
                     <input type="text" id="ppsn" name="ppsn" required class="form-control">
                 </div>
                 <div class="row mb-3">
-                    <label for="enableNotifications" class="form-label">Enable Notifications:</label>
-                    <input type="checkbox" id="enableNotifications" name="enableNotifications" class="form-check-input">
+                    <div class="form-check">
+                        <label for="enableNotifications" class="form-label">Enable Notifications:</label>
+                        <input type="checkbox" id="enableNotifications" name="enableNotifications" class="form-check-input">
+                    </div>
                 </div>
                 <div class="row mb-3 justify-content-end">
                     <div class="col-auto">

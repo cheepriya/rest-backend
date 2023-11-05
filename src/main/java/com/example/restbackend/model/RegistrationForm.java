@@ -30,12 +30,14 @@ public class RegistrationForm {
     private Integer medical_Card_Number;
     @Column(name="ppsn")
     private String ppsn;
+
     @Column(name="enableNotification")
     private Boolean enableNotification;
 
 
     public RegistrationForm() {
     }
+
 
 
     public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, Boolean enableNotification) {
@@ -123,7 +125,7 @@ public class RegistrationForm {
     public void setppsn(String ppsn) {
         this.ppsn = ppsn;
     }
-    
+
     public Boolean getEnableNotification() {
         return enableNotification;
     }
