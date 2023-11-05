@@ -31,14 +31,14 @@ public class RegistrationForm {
     @Column(name="ppsn")
     private String ppsn;
     @Column(name="enableNotification")
-    private String enableNotification;
+    private Boolean enableNotification;
 
 
     public RegistrationForm() {
     }
 
 
-    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, String enableNotification) {
+    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, Boolean enableNotification) {
         this.id = id;
         this.fullName = fullName;
         this.dob = dob;
@@ -124,11 +124,11 @@ public class RegistrationForm {
         this.ppsn = ppsn;
     }
     
-    public String getEnableNotification() {
+    public Boolean getEnableNotification() {
         return enableNotification;
     }
 
-    public void setEnableNotification(String enableNotification) {
+    public void setEnableNotification(Boolean enableNotification) {
         this.enableNotification = enableNotification;
     }
 
