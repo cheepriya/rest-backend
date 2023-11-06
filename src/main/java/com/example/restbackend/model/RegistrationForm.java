@@ -1,5 +1,7 @@
 package com.example.restbackend.model;
 
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.cglib.core.Local;
@@ -13,6 +15,7 @@ public class RegistrationForm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     @Column(name="fullName")
     private String fullName;
@@ -31,8 +34,9 @@ public class RegistrationForm {
     @Column(name="ppsn")
     private String ppsn;
 
-    @Column(name="enableNotification")
-    private Boolean enableNotification;
+    @Column(name="enableNotifi")
+    @JsonDeserialize(using = CustomBooleanDeserializer.class)
+    private Boolean enableNotifi = false;
 
 
     public RegistrationForm() {
@@ -40,7 +44,7 @@ public class RegistrationForm {
 
 
 
-    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, Boolean enableNotification) {
+    public RegistrationForm(Long id, String fullName, Date dob, String address, String eir, String email, Integer mobile_Number, Integer medical_Card_Number, String ppsn, Boolean enableNotifi) {
         this.id = id;
         this.fullName = fullName;
         this.dob = dob;
@@ -50,7 +54,7 @@ public class RegistrationForm {
         this.mobile_Number = mobile_Number;
         this.medical_Card_Number = medical_Card_Number;
         this.ppsn = ppsn;
-        this.enableNotification = enableNotification;
+        this.enableNotifi = enableNotifi;
     }
 
     public Long getId() {
@@ -126,12 +130,12 @@ public class RegistrationForm {
         this.ppsn = ppsn;
     }
 
-    public Boolean getEnableNotification() {
-        return enableNotification;
+    public Boolean getenableNotifi() {
+        return enableNotifi;
     }
 
-    public void setEnableNotification(Boolean enableNotification) {
-        this.enableNotification = enableNotification;
+    public void setenableNotifi(Boolean enableNotifi) {
+        this.enableNotifi = enableNotifi;
     }
 
 }
